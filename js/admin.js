@@ -10,9 +10,7 @@ let genero = document.querySelector("#genero");
 let formPelicula = document.querySelector("#formPelicula");
 let btnCrearPelicula = document.querySelector("#btnCrearPelicula");
 //crear una instancia de la ventana modal
-const modalAdminPelicula = new bootstrap.Modal(
-  document.querySelector("#modalPelicula")
-);
+const modalAdminPelicula = new bootstrap.Modal(document.querySelector("#modalPelicula"));
 
 //agregar el evento
 btnCrearPelicula.addEventListener("click", crearPelicula);
@@ -44,4 +42,12 @@ function guardarPelicula(e) {
   );
   listaPeliculas.push(nueva)
   console.log(listaPeliculas)
+}
+
+
+
+
+
+function guardarPeliculasEnLocalStorge(){
+  localStorage.setItem('listaPeliculasKey',JSON.stringify(listaPeliculas))
 }
