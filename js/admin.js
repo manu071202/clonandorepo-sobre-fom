@@ -51,3 +51,5 @@ function guardarPelicula(e) {
 function guardarPeliculasEnLocalStorge(){
   localStorage.setItem('listaPeliculasKey',JSON.stringify(listaPeliculas))
 }
+
+
